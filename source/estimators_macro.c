@@ -158,7 +158,7 @@ bf_estimators_increment (one, p, ds)
         weight_of_packet = p->w;
         y = weight_of_packet * x * ds;
 
-        exponential = y * exp (-(freq_av - ft) / BOLTZMANN / xplasma->t_e);
+        exponential = y * exp (-H_OVER_K * (freq_av - ft) / xplasma->t_e);
 
         /* Increment the photoionization rate estimator */
 
